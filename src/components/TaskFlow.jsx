@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
+import tfPreview from "../assets/taskflow/preview.png";
+import tfHome from "../assets/taskflow/home.png";
+import tfWorkspace from "../assets/taskflow/workspace.png";
+import tfBoard from "../assets/taskflow/board.png";
+import tfCreateBoard from "../assets/taskflow/createboard.png";
+import tfTimeline from "../assets/taskflow/timeline.png";
+
 
 export default function TaskFlow({ navigate }) {
   const [activeImage, setActiveImage] = useState(null);
@@ -20,11 +27,11 @@ export default function TaskFlow({ navigate }) {
   const learnings = t("taskflow.learnings") || [];
 
   const screenMeta = [
-    { src: "/assets/taskflow/home.png", color: "#b4c5ff" },
-    { src: "/assets/taskflow/workspace.png", color: "#4cd7f6" },
-    { src: "/assets/taskflow/board.png", color: "#d2bbff" },
-    { src: "/assets/taskflow/createboard.png", color: "#b4c5ff" },
-    { src: "/assets/taskflow/timeline.png", color: "#4cd7f6" },
+    { src: tfHome, color: "#b4c5ff" },
+    { src: tfWorkspace, color: "#4cd7f6" },
+    { src: tfBoard, color: "#d2bbff" },
+    { src: tfCreateBoard, color: "#b4c5ff" },
+    { src: tfTimeline, color: "#4cd7f6" },
   ];
   
   const screens = (t("taskflow.screens") || []).map((scr, idx) => ({
@@ -88,9 +95,9 @@ export default function TaskFlow({ navigate }) {
 
       {/* Hero image */}
       <section className="max-w-[1200px] mx-auto px-6 mb-24">
-        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-[16/9] relative group cursor-pointer" onClick={() => setActiveImage("./assets/taskflow/preview.png")}>
+        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-[16/9] relative group cursor-pointer" onClick={() => setActiveImage(tfPreview)}>
           <img
-            src="./assets/taskflow/preview.png"
+            src={tfPreview}
             alt="TaskFlow UI"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />

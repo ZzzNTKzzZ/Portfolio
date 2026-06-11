@@ -103,7 +103,7 @@ export default function Navbar({ currentPage, navigate }) {
           </button>
           
           <a
-            href="https://drive.google.com/file/d/1U0K15QW3QBDKKJu_KA0R0j9j6cIFKUyW/view?usp=sharing"
+            href="https://drive.google.com/uc?export=download&id=1hehn0FBDQYN4-RzRsc8W4Fwd95w74-Ug"
             target="_blank"
             rel="noreferrer"
             className="bg-[#b4c5ff] text-[#002d84] px-5 py-2 rounded-lg text-sm font-semibold hover:brightness-110 hover:scale-105 transition-all shadow-[0_0_15px_rgba(180,197,255,0.2)]"

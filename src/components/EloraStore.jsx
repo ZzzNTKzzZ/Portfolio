@@ -1,5 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "../context/LanguageContext";
+import eloraPopularCategory from "../assets/elorastore/popularcategory.png";
+import eloraItemDetail from "../assets/elorastore/itemdetail.png";
+import eloraAdminProduct from "../assets/elorastore/adminproduct.png";
+import eloraAdminUser from "../assets/elorastore/adminuser.png";
+
 
 const stack = [
   { label: "React 19", color: "primary" },
@@ -32,10 +37,10 @@ export default function EloraStore({ navigate }) {
   const learnings = t("elorastore.learnings") || [];
 
   const galleryMeta = [
-    { src: "/assets/elorastore/popularcategory.png" },
-    { src: "/assets/elorastore/itemdetail.png" },
-    { src: "/assets/elorastore/adminproduct.png" },
-    { src: "/assets/elorastore/adminuser.png" },
+    { src: eloraPopularCategory },
+    { src: eloraItemDetail },
+    { src: eloraAdminProduct },
+    { src: eloraAdminUser },
   ];
 
   const gallery = (t("elorastore.gallery") || []).map((gal, idx) => ({
@@ -124,7 +129,7 @@ export default function EloraStore({ navigate }) {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="#"
+              href="https://github.com/ZzzNTKzzZ/EloraStore"
               className="bg-white text-[#070e1e] py-3 px-8 rounded-lg text-sm font-semibold flex items-center gap-2 hover:-translate-y-0.5 transition-all shadow-xl"
             >
               <span className="material-symbols-outlined text-lg">code</span>{" "}
@@ -302,7 +307,7 @@ export default function EloraStore({ navigate }) {
                   label: t("elorastore.nodes.1.label") || "Middleware",
                   sublabel: t("elorastore.nodes.1.sub") || "Node.js / Express / JWT",
                   color: "#4cd7f6",
-                  bg: "bg-[#4cd7f6]/10",
+                bg: "bg-[#4cd7f6]/10",
                   border: "border-[#4cd7f6]/20",
                 },
                 {

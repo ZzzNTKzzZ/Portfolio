@@ -94,6 +94,17 @@ Ensure you have the following installed on your machine:
     npm run preview
     ```
 
+7.  **Deploy to Firebase Hosting**
+    Log in to your Firebase account and deploy with the custom script:
+    ```bash
+    # Log in to Firebase CLI
+    npx firebase login
+
+    # Build and deploy the project
+    npm run deploy
+    ```
+
+
 ---
 > [!TIP]
 > Add screenshot files of your gorgeous portfolio pages under `/assets` and embed them in the markdown file like so:

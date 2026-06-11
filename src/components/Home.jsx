@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { useLanguage } from "../context/LanguageContext";
+import avatarImg from "../assets/avatar.jpg";
+import taskflowPreview from "../assets/taskflow/preview.png";
+import elorastoreHome from "../assets/elorastore/home.png";
+
 
 export default function Home({ navigate }) {
   const [roleIdx, setRoleIdx] = useState(0);
@@ -168,7 +172,7 @@ export default function Home({ navigate }) {
               <img
                 alt="Nguyen Tuan Khanh"
                 className="w-full h-full object-cover"
-                src="/assets/avatar.jpg"
+                src={avatarImg}
               />
             </div>
             {/* Glow */}
@@ -468,7 +472,7 @@ export default function Home({ navigate }) {
             <div className="h-64 rounded-xl bg-[#ffffff] mb-6 overflow-hidden flex items-center justify-center p-4">
               <img
                 className="h-full object-contain rounded-lg shadow-md transition-transform duration-500 hover:scale-105"
-                src="/assets/taskflow/preview.png"
+                src={taskflowPreview}
                 alt="TaskFlow mobile app"
               />
             </div>
@@ -512,7 +516,7 @@ export default function Home({ navigate }) {
                 </div>
                 <img
                   className="w-full h-full object-cover object-top"
-                  src="/assets/elorastore/home.png"
+                  src={elorastoreHome}
                   alt="Elora Store"
                 />
               </div>
