@@ -1,4 +1,4 @@
-# Cyber-Fidelity Portfolio
+# Portfolio
 
 An advanced, high-performance developer portfolio website designed with a blend of **Glassmorphism** and **Cyber-Minimalism**. It serves as an interactive hub for software engineers to showcase their technical expertise, deep-dive case studies, academic background, and learning roadmap. Engineered with full multi-language (EN/VI) support and integrated API services for client-side interactions.
 
@@ -94,57 +94,6 @@ Ensure you have the following installed on your machine:
     ```
 
 ---
-
-## 💡 Usage Examples
-
-### 1. Translating UI Elements
-To support translation strings dynamically across the application, import and consume the `useLanguage` hook:
-
-```javascript
-import { useLanguage } from './context/LanguageContext';
-
-export default function WelcomeBanner() {
-  const { t, language, toggleLanguage } = useLanguage();
-
-  return (
-    <div className="p-6 glass-card text-center">
-      <h1 className="text-xl font-bold">{t('home.hero.hi')} {t('home.hero.name')}</h1>
-      <button 
-        onClick={toggleLanguage}
-        className="mt-4 px-4 py-2 bg-primary text-navy rounded-lg"
-      >
-        Language: {language.toUpperCase()}
-      </button>
-    </div>
-  );
-}
-```
-
-### 2. Client-Side Email Submission
-The portfolio uses EmailJS to handle messages directly from the client. The form payload structure matches the following shape:
-
-```javascript
-import emailjs from '@emailjs/browser';
-
-const handleFormSubmit = async (formData) => {
-  try {
-    const response = await emailjs.send(
-      "service_nt8spsa", // EmailJS Service ID
-      "template_68cvkep", // EmailJS Template ID
-      {
-        to_email: "ntk22052006@gmail.com",
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-      }
-    );
-    console.log("Success! Message delivered:", response.status);
-  } catch (error) {
-    console.error("Failed to send message:", error);
-  }
-};
-```
-
 > [!TIP]
 > Add screenshot files of your gorgeous portfolio pages under `/assets` and embed them in the markdown file like so:
 > `![Homepage Showcase](/assets/elorastore/home.png)`
